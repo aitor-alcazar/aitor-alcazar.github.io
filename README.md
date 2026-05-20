@@ -1,32 +1,23 @@
 # aitor-alcazar.github.io
 
-Personal website built with Jekyll and deployable on GitHub Pages.
+Minimal personal website built with Jekyll for GitHub Pages.
 
 ## Run locally
 
 ```bash
+bundle install
 bundle exec jekyll serve
 ```
 
-Then open `http://127.0.0.1:4000`.
+## Deploy on GitHub Pages
 
-## Deploy as GitHub Pages
+1. Push this repository to `aitor-alcazar/aitor-alcazar.github.io`.
+2. Go to **Settings → Pages**.
+3. Select **Deploy from a branch**.
+4. Choose branch `main` and folder `/(root)`.
+5. Public URL: `https://aitor-alcazar.github.io`.
 
-1. Push this repository to GitHub as `aitor-alcazar/aitor-alcazar.github.io`.
-2. In **Settings → Pages**, set **Build and deployment** to **Deploy from a branch**.
-3. Select branch `main` and folder `/(root)`.
-4. Your site will be published at: `https://aitor-alcazar.github.io`.
+## Current sections
 
-## Data-driven sections
-
-- In progress cards: `_data/cards.yml`
-- Writing entries: `_data/writing.yml`
-- Talks entries: `_data/talks.yml`
-
-## Structure
-
-- Layouts in `_layouts/`
-- Reusable partials in `_includes/`
-- Homepage data sources in `_data/`
-- Card detail pages in `cards/`
-- Static assets in `assets/`
+- Hero
+- Projects (cards from `_data/cards.yml`)

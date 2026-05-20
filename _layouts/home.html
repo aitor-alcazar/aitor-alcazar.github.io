@@ -2,7 +2,6 @@
 layout: default
 ---
 <section id="hero" class="section hero">
-  <p class="eyebrow">Personal site</p>
   <h1>Aitor Alcazar Fernandez</h1>
   <p class="tagline">Telecommunications Engineer · Research · Prototypes · Notes</p>
   <p class="intro">
@@ -10,44 +9,7 @@ layout: default
   </p>
 </section>
 
-<section id="about" class="section">
-  <h2>About</h2>
-  <p>
-    This is a compact, evolving space to keep drafts and small experiments organized.
-    Most entries are placeholders and will be expanded iteratively.
-  </p>
-</section>
-
-<section id="in-progress" class="section">
-  <div class="section-heading">
-    <h2>In progress</h2>
-    <p class="muted">Cards loaded from <code>_data/cards.yml</code>.</p>
-  </div>
+<section id="projects" class="section">
+  <h2>Projects</h2>
   {% include card-grid.html cards=site.data.cards %}
-</section>
-
-<section id="writing" class="section">
-  <div class="section-heading">
-    <h2>Writing</h2>
-    <p class="muted">Entries loaded from <code>_data/writing.yml</code>.</p>
-  </div>
-  {% include entry-list.html entries=site.data.writing %}
-</section>
-
-<section id="talks" class="section">
-  <div class="section-heading">
-    <h2>Talks</h2>
-    <p class="muted">Entries loaded from <code>_data/talks.yml</code>.</p>
-  </div>
-  {% include entry-list.html entries=site.data.talks %}
-</section>
-
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <ul class="entry-list">
-    <li><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-    <li><strong>GitHub:</strong> <a href="https://github.com/aitor-alcazar">github.com/aitor-alcazar</a></li>
-    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/your-linkedin-slug">linkedin.com/in/your-linkedin-slug</a></li>
-    <li><strong>CV:</strong> <a href="{{ '/assets/cv.pdf' | relative_url }}">Download CV (PDF)</a></li>
-  </ul>
 </section>
