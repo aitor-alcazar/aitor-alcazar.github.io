@@ -166,10 +166,13 @@ h2,
 
 .hero-subtitle {
   margin: 0.75rem 0 0;
-  color: rgba(82, 82, 82, 0.9);
+  color: var(--muted);
   font-size: 1rem;
   letter-spacing: 0.08em;
   text-transform: lowercase;
+  display: inline-block;
+  margin-left: auto;
+  text-align: right;
 }
 
 .hero-copy {
