@@ -110,11 +110,11 @@ h2,
 
 .section-block {
   margin-top: 1rem;
-  padding: 1.75rem 1.75rem 1.85rem;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  border-radius: 1.75rem;
-  box-shadow: var(--shadow);
+  padding: 3.4rem 1.75rem 1.85rem;
+  background: rgba(15, 19, 28, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 2rem;
+  box-shadow: 0 36px 80px rgba(0, 0, 0, 0.32);
   position: relative;
   overflow: hidden;
 }
@@ -122,21 +122,26 @@ h2,
 .section-block::before {
   content: "";
   position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(circle at top left, rgba(255,255,255,0.18), transparent 24%);
+  top: 1.2rem;
+  left: 1.25rem;
+  right: 1.25rem;
+  height: 3.2rem;
+  border-radius: 1.4rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .section-block::after {
   content: "";
   position: absolute;
-  top: 1.3rem;
-  left: 1.5rem;
-  right: 1.5rem;
-  height: 3px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.18);
-  opacity: 0.6;
+  top: 2.05rem;
+  left: 2rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #ff5f56;
+  box-shadow: 1.3rem 0 0 #ffbd2e, 2.6rem 0 0 #27c93f;
 }
 
 .section-block h2,
