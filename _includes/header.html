@@ -1,0 +1,19 @@
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+
+    <nav aria-label="Primary">
+      <a href="{{ '/' | relative_url }}#about">About</a>
+      <a href="{{ '/' | relative_url }}#in-progress">In progress</a>
+      <a href="{{ '/' | relative_url }}#writing">Writing</a>
+      <a href="{{ '/' | relative_url }}#talks">Talks</a>
+      <a href="{{ '/' | relative_url }}#contact">Contact</a>
+    </nav>
+
+    <div class="theme-switcher" role="group" aria-label="Theme selector">
+      <button type="button" data-theme-choice="auto" aria-label="Use system theme">Auto</button>
+      <button type="button" data-theme-choice="light" aria-label="Use light theme">Light</button>
+      <button type="button" data-theme-choice="dark" aria-label="Use dark theme">Dark</button>
+    </div>
+  </div>
+</header>
