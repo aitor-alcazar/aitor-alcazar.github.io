@@ -2,14 +2,64 @@
 layout: default
 ---
 <section id="hero" class="section hero">
-  <h1>Aitor Alcazar Fernandez</h1>
-  <p class="tagline">Telecommunications Engineer · Research · Prototypes · Notes</p>
-  <p class="intro">
-    A minimal personal website for collecting ideas, notes, prototypes, and future research directions.
+  <h1 class="page-title">aitor alcazar fernandez</h1>
+  <p class="hero-copy">
+    I work at the intersection of telecommunications, network automation, and applied AI. My interests focus on how future networks can become more observable, programmable, and autonomous through Network Digital Twins, open interfaces, SDN-based control, and AI-assisted operations.
+  </p>
+  <p class="hero-copy">
+    This site is a lightweight space for collecting notes, research directions, prototypes, and technical experiments. Most entries are intentionally work in progress: early ideas, drafts, and explorations that may evolve over time.
   </p>
 </section>
 
-<section id="projects" class="section">
-  <h2>Projects</h2>
-  {% include card-grid.html cards=site.data.cards %}
+<section id="about" class="section section-block">
+  <h2>~/about</h2>
+  <div class="section-copy">
+    <p>I work at the intersection of telecommunications, network automation, and applied AI. My interests focus on how future networks can become more observable, programmable, and autonomous through Network Digital Twins, open interfaces, SDN-based control, and AI-assisted operations.</p>
+    <p>This site is a lightweight space for collecting notes, research directions, prototypes, and technical experiments. Most entries are intentionally work in progress: early ideas, drafts, and explorations that may evolve over time.</p>
+  </div>
+</section>
+
+<section id="in-progress" class="section section-block">
+  <h2>~/in-progress</h2>
+  <p class="section-copy">Projects, experiments, and prototypes drawn from notes and ongoing research.</p>
+  {% include card-carousel.html cards=site.data.cards %}
+</section>
+
+<section id="writing" class="section section-block">
+  <h2>~/writing</h2>
+  {% if site.data.writing and site.data.writing.size > 0 %}
+    <ol class="entry-list">
+      {% for entry in site.data.writing %}
+        <li>
+          <span class="entry-title">{{ entry.title }}</span>
+          {% if entry.date %}<span class="entry-meta">{{ entry.date }}</span>{% endif %}
+          {% if entry.url %}<a href="{{ entry.url | relative_url }}">view</a>{% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  {% else %}
+    <p class="empty-note">No writing entries available yet.</p>
+  {% endif %}
+</section>
+
+<section id="talks" class="section section-block">
+  <h2>~/talks</h2>
+  {% if site.data.talks and site.data.talks.size > 0 %}
+    <ol class="entry-list">
+      {% for talk in site.data.talks %}
+        <li>
+          <span class="entry-title">{{ talk.title }}</span>
+          {% if talk.date %}<span class="entry-meta">{{ talk.date }}</span>{% endif %}
+          {% if talk.location %}<span class="entry-meta">{{ talk.location }}</span>{% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  {% else %}
+    <p class="empty-note">No talks listed yet.</p>
+  {% endif %}
+</section>
+
+<section id="contact" class="section section-block">
+  <h2>~/contact</h2>
+  <p class="section-copy">Find me on GitHub and LinkedIn. This site is focused on notes, research, and technical experiments.</p>
 </section>
