@@ -110,8 +110,8 @@ h2,
 
 .section-block {
   margin-top: 1rem;
-  padding: 3.4rem 1.75rem 1.85rem;
-  background: rgba(15, 19, 28, 0.95);
+  padding: 3.25rem 1.75rem 1.85rem;
+  background: rgba(18, 22, 34, 0.97);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 2rem;
   box-shadow: 0 36px 80px rgba(0, 0, 0, 0.32);
@@ -125,29 +125,37 @@ h2,
   top: 1.2rem;
   left: 1.25rem;
   right: 1.25rem;
-  height: 3.2rem;
-  border-radius: 1.4rem;
-  background: rgba(255, 255, 255, 0.03);
+  height: 3rem;
+  border-radius: 1.35rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 .section-block::after {
   content: "";
   position: absolute;
-  top: 2.05rem;
+  top: 1.9rem;
   left: 2rem;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 0.72rem;
+  height: 0.72rem;
   border-radius: 50%;
   background: #ff5f56;
-  box-shadow: 1.3rem 0 0 #ffbd2e, 2.6rem 0 0 #27c93f;
+  box-shadow: 1.35rem 0 0 #ffbd2e, 2.7rem 0 0 #27c93f;
 }
 
 .section-block h2,
 .section-block .section-copy {
   position: relative;
   z-index: 1;
+}
+
+.section-block h2 {
+  margin: 0 0 0.85rem;
+}
+
+.section-block .section-copy {
+  margin: 0;
 }
 
 .page-title {
@@ -325,7 +333,7 @@ h2 {
 }
 
 .project-name::before {
-  content: "$ ";
+  content: ">> ";
   color: var(--muted);
 }
 
