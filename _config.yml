@@ -1,0 +1,10 @@
+title: Aitor Alcazar Fernandez
+description: Personal website for notes, ideas, prototypes, and research directions.
+url: "https://aitor-alcazar.github.io"
+baseurl: ""
+markdown: kramdown
+permalink: pretty
+collections:
+  cards:
+    output: true
+    permalink: /cards/:name/

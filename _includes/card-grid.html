@@ -1,0 +1,11 @@
+<div class="card-grid">
+  {% for card in include.cards %}
+    <article class="card-item">
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.description }}</p>
+      {% if card.url %}
+        <a href="{{ card.url | relative_url }}">Open card →</a>
+      {% endif %}
+    </article>
+  {% endfor %}
+</div>
