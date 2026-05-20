@@ -1,11 +1,12 @@
-<div class="card-grid">
+<div class="project-list">
   {% for card in include.cards %}
-    <article class="card-item">
-      <h3>{{ card.title }}</h3>
-      <p>{{ card.description }}</p>
+    <div class="project-row">
       {% if card.url %}
-        <a href="{{ card.url | relative_url }}" class="card-link">Open card →</a>
+        <a href="{{ card.url | relative_url }}" class="project-name">{{ card.title }}</a>
+      {% else %}
+        <span class="project-name">{{ card.title }}</span>
       {% endif %}
-    </article>
+      <span class="project-description">{{ card.description }}</span>
+    </div>
   {% endfor %}
 </div>
