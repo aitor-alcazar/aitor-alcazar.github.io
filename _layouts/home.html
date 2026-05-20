@@ -2,13 +2,15 @@
 layout: default
 ---
 <section id="hero" class="section hero">
-  <h1 class="page-title">aitor alcazar fernandez</h1>
-  <p class="hero-copy">
-    I work at the intersection of telecommunications, network automation, and applied AI. My interests focus on how future networks can become more observable, programmable, and autonomous through Network Digital Twins, open interfaces, SDN-based control, and AI-assisted operations.
-  </p>
-  <p class="hero-copy">
-    This site is a lightweight space for collecting notes, research directions, prototypes, and technical experiments. Most entries are intentionally work in progress: early ideas, drafts, and explorations that may evolve over time.
-  </p>
+  <div class="hero-top">
+    <div>
+      <h1 class="page-title">aitor alcazar fernandez</h1>
+      <p class="hero-copy">
+        I work at the intersection of telecommunications, network automation, and applied AI. My interests focus on how future networks can become more observable, programmable, and autonomous through Network Digital Twins, open interfaces, SDN-based control, and AI-assisted operations.
+      </p>
+    </div>
+    <img src="{{ '/assets/images/profile.svg' | relative_url }}" alt="Profile image of aitor alcazar fernandez" class="profile-image" />
+  </div>
 </section>
 
 <section id="about" class="section section-block">
@@ -19,8 +21,8 @@ layout: default
   </div>
 </section>
 
-<section id="in-progress" class="section section-block">
-  <h2>~/in-progress</h2>
+<section id="projects" class="section section-block">
+  <h2>~/projects</h2>
   <p class="section-copy">Projects, experiments, and prototypes drawn from notes and ongoing research.</p>
   {% include card-carousel.html cards=site.data.cards %}
 </section>
