@@ -4,7 +4,7 @@
       <h3>{{ card.title }}</h3>
       <p>{{ card.description }}</p>
       {% if card.url %}
-        <a href="{{ card.url | relative_url }}">Open card →</a>
+        <a href="{{ card.url | relative_url }}" class="card-link">Open card →</a>
       {% endif %}
     </article>
   {% endfor %}

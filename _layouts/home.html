@@ -13,8 +13,12 @@ layout: default
 <section id="about" class="section section-block">
   <h2>~/about</h2>
   <div class="section-copy">
-    <p>I work at the intersection of telecommunications, network automation, and applied AI. My interests focus on how future networks can become more observable, programmable, and autonomous through Network Digital Twins, open interfaces, SDN-based control, and AI-assisted operations.</p>
-    <p>This site is a lightweight space for collecting notes, research directions, prototypes, and technical experiments. Most entries are intentionally work in progress: early ideas, drafts, and explorations that may evolve over time.</p>
+    <p>
+      I am a technology enthusiast with a strong curiosity for how things work, how they connect, and how they can be improved. I enjoy exploring new ideas across telecommunications, network automation, applied AI, digital systems, and emerging technologies, always with the mindset of learning, experimenting, and building something useful along the way.
+    </p>
+    <p>
+      Beyond technology, I am deeply interested in music, especially electronic music and Spanish indie, as well as cinema in many of its forms. These interests also shape the way I approach creativity: mixing structure, intuition, rhythm, and storytelling.
+    </p>
   </div>
 </section>
 
@@ -24,39 +28,6 @@ layout: default
   {% include card-carousel.html cards=site.data.cards %}
 </section>
 
-<section id="writing" class="section section-block">
-  <h2>~/writing</h2>
-  {% if site.data.writing and site.data.writing.size > 0 %}
-    <ol class="entry-list">
-      {% for entry in site.data.writing %}
-        <li>
-          <span class="entry-title">{{ entry.title }}</span>
-          {% if entry.date %}<span class="entry-meta">{{ entry.date }}</span>{% endif %}
-          {% if entry.url %}<a href="{{ entry.url | relative_url }}">view</a>{% endif %}
-        </li>
-      {% endfor %}
-    </ol>
-  {% else %}
-    <p class="empty-note">No writing entries available yet.</p>
-  {% endif %}
-</section>
-
-<section id="talks" class="section section-block">
-  <h2>~/talks</h2>
-  {% if site.data.talks and site.data.talks.size > 0 %}
-    <ol class="entry-list">
-      {% for talk in site.data.talks %}
-        <li>
-          <span class="entry-title">{{ talk.title }}</span>
-          {% if talk.date %}<span class="entry-meta">{{ talk.date }}</span>{% endif %}
-          {% if talk.location %}<span class="entry-meta">{{ talk.location }}</span>{% endif %}
-        </li>
-      {% endfor %}
-    </ol>
-  {% else %}
-    <p class="empty-note">No talks listed yet.</p>
-  {% endif %}
-</section>
 
 <section id="contact" class="section section-block">
   <h2>~/contact</h2>

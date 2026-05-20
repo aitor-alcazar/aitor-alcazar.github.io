@@ -33,7 +33,8 @@ body {
 }
 
 body {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "SF Mono", "JetBrains Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-feature-settings: "cv11" 1, "ss01" 1;
   background: var(--bg);
   color: var(--text);
   line-height: 1.55;
@@ -238,28 +239,70 @@ h2 {
   border-color: var(--accent);
 }
 
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
 .card-item {
-  padding: 1.35rem;
-  background: var(--surface-alt);
-  border: 1px solid var(--border);
+  position: relative;
+  min-height: 220px;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid transparent;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  overflow: hidden;
+}
+
+.card-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255,255,255,0.16), transparent 60%);
+}
+
+.card-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 24px 45px rgba(15, 118, 110, 0.12);
 }
 
 .card-item h3 {
   margin: 0 0 0.9rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.01em;
 }
 
 .card-item p {
   margin: 0;
   color: var(--muted);
+  white-space: pre-line;
 }
 
 .card-link {
-  margin-top: 1.2rem;
+  margin-top: 1.5rem;
   display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   color: var(--accent);
+  padding: 0.85rem 1.1rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--accent-soft);
   text-decoration: none;
-  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.card-link:hover,
+.card-link:focus-visible {
+  color: #ffffff;
+  background: var(--accent);
+  transform: translateY(-1px);
 }
 
 .entry-list {
