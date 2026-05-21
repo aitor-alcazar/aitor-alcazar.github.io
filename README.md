@@ -20,4 +20,4 @@ bundle exec jekyll serve
 ## Current sections
 
 - Hero
-- Projects (cards from `_data/cards.yml`)
+- Projects
