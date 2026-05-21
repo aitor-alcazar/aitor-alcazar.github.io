@@ -4,3 +4,8 @@ url: "https://aitor-alcazar.github.io"
 baseurl: ""
 markdown: kramdown
 permalink: pretty
+
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name/

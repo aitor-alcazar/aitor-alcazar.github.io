@@ -26,4 +26,31 @@ layout: default
 <section id="projects" class="section section-block">
   <h2><span class="section-path">~/projects</span></h2>
   <p class="section-copy">Projects, experiments, and prototypes drawn from notes and ongoing research.</p>
+  
+  {% assign projects = site.projects | sort: "order" %}
+  {% if projects.size > 0 %}
+  <div class="projects-table">
+    <table class="ascii-table">
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for project in projects %}
+        <tr class="project-row">
+          <td class="project-title">
+            <a href="{{ project.url | relative_url }}" class="project-link">
+              <span class="chevron">›</span>
+              <span class="title-text">{{ project.title }}</span>
+            </a>
+          </td>
+          <td class="project-description">{{ project.short_description }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
 </section>

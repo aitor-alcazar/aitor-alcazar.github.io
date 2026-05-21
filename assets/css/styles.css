@@ -417,3 +417,205 @@ h2 {
     gap: 0.45rem;
   }
 }
+
+/* Projects Table Styles */
+.projects-table {
+  margin-top: 1.5rem;
+  overflow-x: auto;
+}
+
+.ascii-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.ascii-table thead {
+  border-bottom: 2px solid var(--border);
+}
+
+.ascii-table thead th {
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+  background: transparent;
+}
+
+.ascii-table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.ascii-table tbody tr:hover {
+  background-color: var(--accent-soft);
+}
+
+.ascii-table td {
+  padding: 0.85rem 0.5rem;
+  color: var(--text);
+}
+
+.project-title {
+  font-weight: 600;
+  width: 40%;
+}
+
+.project-description {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.project-link:hover {
+  color: var(--accent);
+}
+
+.project-link .chevron {
+  display: inline-block;
+  font-size: 1.1em;
+  transition: transform 0.2s ease;
+  opacity: 0.6;
+}
+
+.project-link:hover .chevron {
+  transform: translateX(0.15rem);
+  opacity: 1;
+}
+
+.project-link .title-text {
+  text-decoration: none;
+}
+
+.project-link:hover .title-text {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 0.2em;
+}
+
+/* Project Detail Page */
+.project-detail {
+  max-width: 76ch;
+}
+
+.project-header {
+  margin-bottom: 2rem;
+}
+
+.project-detail .project-title {
+  font-size: 1.75rem;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.project-meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.project-external-link {
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s ease;
+}
+
+.project-external-link:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.project-external-link .icon {
+  display: inline-block;
+  font-size: 0.9em;
+  transition: transform 0.2s ease;
+}
+
+.project-external-link:hover .icon {
+  transform: translate(0.1rem, -0.1rem);
+}
+
+.project-content {
+  margin: 2rem 0;
+}
+
+.project-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: var(--accent);
+  text-transform: lowercase;
+}
+
+.project-content h2:first-child {
+  margin-top: 0;
+}
+
+.project-content p {
+  margin: 0 0 1rem;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.project-content ul,
+.project-content ol {
+  margin: 0 0 1.5rem;
+  padding-left: 1.5rem;
+  color: var(--text);
+}
+
+.project-content li {
+  margin-bottom: 0.5rem;
+}
+
+.project-nav {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.back-link {
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .ascii-table {
+    font-size: 0.85rem;
+  }
+
+  .ascii-table thead th {
+    padding: 0.6rem 0.4rem;
+  }
+
+  .ascii-table td {
+    padding: 0.7rem 0.4rem;
+  }
+
+  .project-title {
+    width: auto;
+  }
+}

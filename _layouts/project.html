@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<section class="section section-block project-detail">
+  <div class="project-header">
+    <h1 class="project-title">{{ page.title }}</h1>
+    <p class="project-meta">
+      <a href="{{ page.link }}" target="_blank" class="project-external-link">
+        <span class="icon">↗</span> View Project
+      </a>
+    </p>
+  </div>
+
+  <div class="project-content">
+    {{ content }}
+  </div>
+
+  <nav class="project-nav">
+    <a href="{{ '/' | relative_url }}#projects" class="back-link">← Back to projects</a>
+  </nav>
+</section>
